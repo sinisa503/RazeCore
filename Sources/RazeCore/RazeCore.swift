@@ -8,7 +8,7 @@ class RazeCore {
   ///   - hexString:A 6-digit haxadecimal string
   ///   - alpha: A number between 0.0 and 1.0 indicating transparancy
   /// - Returns: UIColor defined by hex string
-  class func colorFromHexDecString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+  public class func colorFromHexDecString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
     let r, g, b: CGFloat
     let offset = hexString.hasPrefix("#") ? 1 : 0
     let start = hexString.index(hexString.startIndex, offsetBy: offset)
