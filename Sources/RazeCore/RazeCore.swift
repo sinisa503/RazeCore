@@ -28,4 +28,10 @@ public class RazeCore {
   public static var razeColor: UIColor {
     return self.colorFromHexDecString("006736")
   }
+  
+  
+  /// Return an object of 'UIColor' with second most eye pleasing color in the rorld
+  public static var secondaryRazeColor: UIColor {
+    return self.colorFromHexDecString("FCFFFD")
+  }
 }
