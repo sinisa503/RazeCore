@@ -1,6 +1,6 @@
 import UIKit
 
-class RazeCore {
+public class RazeCore {
   
   /// Allows you to convert a 6 digit string into a UIColor instance
   /// - Warning: The "#" simbol is stripped out of the string
@@ -8,7 +8,7 @@ class RazeCore {
   ///   - hexString:A 6-digit haxadecimal string
   ///   - alpha: A number between 0.0 and 1.0 indicating transparancy
   /// - Returns: UIColor defined by hex string
-  public class func colorFromHexDecString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+  internal class func colorFromHexDecString(_ hexString: String, alpha: CGFloat = 1.0) -> UIColor {
     let r, g, b: CGFloat
     let offset = hexString.hasPrefix("#") ? 1 : 0
     let start = hexString.index(hexString.startIndex, offsetBy: offset)
@@ -22,5 +22,10 @@ class RazeCore {
       return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
     return UIColor(red: 0, green: 0, blue: 0, alpha: alpha)
+  }
+  
+  /// The most eye pleasing color known to all humanity
+  public static var razeColor: UIColor {
+    return self.colorFromHexDecString("006736")
   }
 }
